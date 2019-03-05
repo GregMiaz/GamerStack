@@ -1,0 +1,21 @@
+﻿@page "{gameId:int}"
+@model GamerStack.Web.Pages.Games.GameDetailsModel
+@{
+    ViewData["Title"] = "GameDetails";
+}
+
+<h2>@Model.Game.Title</h2>
+<div>
+    Game Id: @Model.Game.GameId
+</div>
+<div>
+    Description: @Model.Game.Description
+</div>
+<div>
+    Console Model: @Model.Game.Console
+</div>
+<div>
+    Is Game Finished?: @Model.Game.IsFinished
+</div>
+
+<a asp-page="./GameList" class="btn btn-default">Back to List of Games</a>

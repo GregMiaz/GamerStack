@@ -8,5 +8,6 @@ namespace GamerStack.Repository
     public interface IGameRepositoryData
     {
         IEnumerable<Game> GetGamesByTitle(string title);
+        Game GetGameById(int gameId);
     }
 }

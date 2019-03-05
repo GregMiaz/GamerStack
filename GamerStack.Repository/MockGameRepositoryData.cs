@@ -27,5 +27,8 @@ namespace GamerStack.Repository
                    orderby g.Title
                    select g;
         }
+
+        public Game GetGameById(int gameId)
+                   => _games.SingleOrDefault(g => g.GameId == gameId);
     }
 }

@@ -33,6 +33,11 @@
             <td>@game.Description</td>
             <td>@game.Console</td>
             <td>@game.IsFinished</td>
+            <td>
+                <a class="btn btn-lg" asp-page="./GameDetails" asp-route-gameId="@game.GameId">
+                    <i class="glyphicon glyphicon-zoom-in"></i>
+                </a>
+            </td>
         </tr>
     }
 
