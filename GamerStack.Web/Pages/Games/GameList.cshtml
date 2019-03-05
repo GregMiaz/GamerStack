@@ -1,7 +1,39 @@
 ﻿@page
 @model GameListModel
 @{
-    
+
 }
 
 <h2>List of games</h2>
+
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" asp-for="SearchValue"/>
+            <span class="input-group-btn">
+                <button class="btn btn-default">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</form>
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Console Model</th>
+        <th>Is Game Finished?</th>
+    </tr>
+    @foreach (var game in Model.Games)
+    {
+        <tr>
+            <td>@game.Title</td>
+            <td>@game.Description</td>
+            <td>@game.Console</td>
+            <td>@game.IsFinished</td>
+        </tr>
+    }
+
+</table>
