@@ -26,7 +26,7 @@ namespace GamerStack.Web
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddSingleton<IGameRepositoryData, MockGameRepositoryData>();
+            services.AddSingleton<IVideoGameRepositoryData, MockVideoGameRepositoryData>();
 
             services.Configure<CookiePolicyOptions>(options =>
             {

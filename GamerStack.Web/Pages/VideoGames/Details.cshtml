@@ -1,0 +1,19 @@
+﻿@page "{videoGameId:int}"
+@model GamerStack.Web.Pages.VideoGames.DetailsModel
+
+
+<h2>@Model.VideoGame.Title</h2>
+<div>
+    Game Id: 
+</div>
+<div>
+    Description: @Model.VideoGame.Description
+</div>
+<div>
+    Console Model: @Model.VideoGame.Console
+</div>
+<div>
+    Is Game Finished?: @Model.VideoGame.IsFinished
+</div>
+
+<a asp-page="./List" class="btn btn-default">Back to List of Video Games</a>

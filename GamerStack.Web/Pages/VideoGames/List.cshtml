@@ -1,10 +1,8 @@
 ﻿@page
-@model GameListModel
-@{
+@model ListModel
 
-}
 
-<h2>List of games</h2>
+<h2>List of video games</h2>
 
 <form method="get">
     <div class="form-group">
@@ -26,15 +24,15 @@
         <th>Console Model</th>
         <th>Is Game Finished?</th>
     </tr>
-    @foreach (var game in Model.Games)
+    @foreach (var videoGame in Model.VideoGames)
     {
         <tr>
-            <td>@game.Title</td>
-            <td>@game.Description</td>
-            <td>@game.Console</td>
-            <td>@game.IsFinished</td>
+            <td>@videoGame.Title</td>
+            <td>@videoGame.Description</td>
+            <td>@videoGame.Console</td>
+            <td>@videoGame.IsFinished</td>
             <td>
-                <a class="btn btn-lg" asp-page="./GameDetails" asp-route-gameId="@game.GameId">
+                <a class="btn btn-lg" asp-page="./Details" asp-route-videoGameId="@videoGame.VideoGameId">
                     <i class="glyphicon glyphicon-zoom-in"></i>
                 </a>
             </td>
