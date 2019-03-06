@@ -8,8 +8,4 @@
     <ProjectReference Include="..\GamerStack.Models\GamerStack.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="VideoGameData\" />
-  </ItemGroup>
-
 </Project>

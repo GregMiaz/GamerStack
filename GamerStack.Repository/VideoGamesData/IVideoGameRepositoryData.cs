@@ -1,9 +1,9 @@
-﻿using GamerStack.Models;
+﻿using GamerStack.VideoGamesCore.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace GamerStack.Repository
+namespace GamerStack.VideoGamesData.Repository
 {
     public interface IVideoGameRepositoryData
     {

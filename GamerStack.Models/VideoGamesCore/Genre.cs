@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GamerStack.Models
+namespace GamerStack.VideoGamesCore.Models
 {
     public enum Genre
     {

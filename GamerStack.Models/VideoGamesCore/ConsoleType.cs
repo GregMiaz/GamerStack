@@ -1,4 +1,4 @@
-﻿namespace GamerStack.Models
+﻿namespace GamerStack.VideoGamesCore.Models
 {
     public enum ConsoleType
     {
