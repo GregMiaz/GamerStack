@@ -21,6 +21,7 @@
     <tr>
         <th>Title</th>
         <th>Description</th>
+        <th>Genre</th>
         <th>Console Model</th>
         <th>Is Game Finished?</th>
     </tr>
@@ -29,6 +30,7 @@
         <tr>
             <td>@videoGame.Title</td>
             <td>@videoGame.Description</td>
+            <td>@videoGame.Genre</td>
             <td>@videoGame.Console</td>
             <td>@videoGame.IsFinished</td>
             <td>
@@ -41,5 +43,6 @@
             </td>
         </tr>
     }
-
 </table>
+
+<a asp-page=".\Add" class="btn btn-primary">Add New Video Game</a>

@@ -20,6 +20,9 @@ namespace GamerStack.Web.Pages.VideoGames
 
         public VideoGame VideoGame { get; set; }
 
+        [TempData]
+        public string Information { get; set; }
+
         public IActionResult OnGet(int videoGameId)
         {
             VideoGame = _videoGamesRepositoryData.GetVideoGameById(videoGameId);

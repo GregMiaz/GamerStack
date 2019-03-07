@@ -30,5 +30,31 @@ namespace GamerStack.VideoGamesData.Repository
 
         public VideoGame GetVideoGameById(int id)
                    => _videoGames.SingleOrDefault(g => g.VideoGameId == id);
+
+
+        public VideoGame AddVideoGame(VideoGame videoGameToAdd)
+        {
+            _videoGames.Add(videoGameToAdd);
+            return videoGameToAdd;
+        }
+
+
+        public VideoGame EditVideoGame(VideoGame modifiedVideoGame)
+        {
+            var videoGame = _videoGames.SingleOrDefault(g => g.VideoGameId == modifiedVideoGame.VideoGameId);
+            if (videoGame != null)
+            {
+                videoGame.Title = modifiedVideoGame.Title;
+                videoGame.Description = modifiedVideoGame.Description;
+                videoGame.Genre = modifiedVideoGame.Genre;
+                videoGame.Console = modifiedVideoGame.Console;
+            }
+            return videoGame;
+        }
+
+        public int SaveTransaction()
+        {
+            return 0;
+        }
     }
 }

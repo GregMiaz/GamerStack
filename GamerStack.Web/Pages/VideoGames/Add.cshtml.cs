@@ -10,12 +10,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace GamerStack.Web.Pages.VideoGames
 {
-    public class EditModel : PageModel
+    public class AddModel : PageModel
     {
         private readonly IVideoGamesRepositoryData _videoGamesRepositoryData;
         private readonly IHtmlHelper _htmlHelper;
 
-        public EditModel(IVideoGamesRepositoryData videoGamesRepositoryData, IHtmlHelper htmlHelper)
+        public AddModel(IVideoGamesRepositoryData videoGamesRepositoryData, IHtmlHelper htmlHelper)
         {
             _videoGamesRepositoryData = videoGamesRepositoryData;
             _htmlHelper = htmlHelper;
@@ -25,12 +25,14 @@ namespace GamerStack.Web.Pages.VideoGames
         public VideoGame VideoGame { get; set; }
         public IEnumerable<SelectListItem> Genres { get; set; }
         public IEnumerable<SelectListItem> ConsoleTypes { get; set; }
-        
-        public IActionResult OnGet(int videoGameId)
+
+        public IActionResult OnGet()
         {
-            VideoGame = _videoGamesRepositoryData.GetVideoGameById(videoGameId);
             Genres = _htmlHelper.GetEnumSelectList<Genre>();
             ConsoleTypes = _htmlHelper.GetEnumSelectList<ConsoleType>();
+
+            VideoGame = new VideoGame();
+
             if (VideoGame == null)
             {
                 return RedirectToPage("./PageNotFound");
@@ -46,9 +48,9 @@ namespace GamerStack.Web.Pages.VideoGames
                 ConsoleTypes = _htmlHelper.GetEnumSelectList<ConsoleType>();
                 return Page();
             }
-            _videoGamesRepositoryData.EditVideoGame(VideoGame);
+            _videoGamesRepositoryData.AddVideoGame(VideoGame);
             _videoGamesRepositoryData.SaveTransaction();
-            TempData["Information"] = "Video Game was successfully edited!";
+            TempData["Information"] = "Video Game successfully added to your collection!";
             return RedirectToPage("./Details", new { videoGameId = VideoGame.VideoGameId });
         }
     }
