@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GamerStack.VideoGamesData.Repository
 {
-    public interface IVideoGameRepositoryData
+    public interface IVideoGamesRepositoryData
     {
         IEnumerable<VideoGame> GetVideoGamesByTitle(string title);
         VideoGame GetVideoGameById(int gameId);

@@ -1,0 +1,30 @@
+﻿@page "{videoGameId:int}"
+@model GamerStack.Web.Pages.VideoGames.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>@Model.VideoGame.Title is ready for edit operation</h2>
+
+<form method="post">
+
+    <input type="hidden" asp-for="VideoGame.VideoGameId" />
+    <div class="form-group">
+        <label asp-for="VideoGame.Title"></label>
+        <input asp-for="VideoGame.Title" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="VideoGame.Description"></label>
+        <input asp-for="VideoGame.Description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="VideoGame.Genre"></label>
+        <select asp-for="VideoGame.Genre" asp-items="Model.Genres" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="VideoGame.Console"></label>
+        <select asp-for="VideoGame.Console" asp-items="Model.ConsoleTypes" class="form-control"></select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save changes</button>
+</form>

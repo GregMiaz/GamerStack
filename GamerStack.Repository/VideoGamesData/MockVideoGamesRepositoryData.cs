@@ -6,11 +6,11 @@ using System.Text;
 
 namespace GamerStack.VideoGamesData.Repository
 {
-    public class MockVideoGameRepositoryData : IVideoGameRepositoryData
+    public class MockVideoGamesRepositoryData : IVideoGamesRepositoryData
     {
         private List<VideoGame> _videoGames;
 
-        public MockVideoGameRepositoryData()
+        public MockVideoGamesRepositoryData()
         {
             _videoGames = new List<VideoGame>()
             {
