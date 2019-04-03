@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using GamerStack.VideoGamesCore.Models;
+﻿using GamerStack.VideoGamesCore.Models;
 using GamerStack.VideoGamesData.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
 
 namespace GamerStack.Web.Pages.VideoGames
 {
